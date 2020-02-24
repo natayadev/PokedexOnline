@@ -1,0 +1,309 @@
+* {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #ef5350;
+  color: #FFF;
+}
+
+@media screen and (max-width: 800px) {
+.pokedex {
+  display: none;
+}
+
+.pokedex2 {
+  background-color: #ef5350;
+  border-radius: 5%;
+  height: 82vh;
+  width: 80vh;
+  margin: auto;
+  color: #FBEFF8;
+  border: solid #481557 1px;
+  border-bottom: 5px;
+}}
+
+@media screen and (min-width: 800px) {
+.pokedex2 {
+  display: none;
+}
+
+.pokedex {
+  background-color: #ef5350;
+  border-radius: 5%;
+  height: 82vh;
+  width: 128vh;
+  margin: auto;
+  border: solid #481557 1px;
+  border-bottom: 5px;
+
+}
+
+.pokemonadentro {
+  position: relative;
+  background-color: #FFF;
+  border-radius: 20px;
+  left: 15px;
+  width: 270px;
+  height: 150px;
+}
+
+.pokemonafuera {
+  background-color: #C6CCCC;
+  border-radius: 20px;
+  margin-left: 4vh;
+  width: 300px;
+  height: 212px;
+}
+
+.izquierda {
+  position: relative;
+  float: left;
+  height: 80vh;
+  width: 57vh;
+  margin-left: 3.25vh;
+}
+
+.derecha {
+  position: relative;
+  float: right;
+  height: 80vh;
+  width: 57vh;
+  margin-right: 3.25vh;
+}
+
+.arriba {
+  height: 18vh;
+  width: 56.8vh;
+}
+
+.medio {
+  height: 34vh;
+  width: 56.8vh;
+}
+
+.abajo {
+  height: 28vh;
+  width: 57vh;
+}
+
+.flechas {
+  margin-left: 20vh;
+  float: left;
+  margin-top: 6vh;
+  height: 16vh;
+  width: 16vh;
+ }
+
+.colazul {
+  margin-top: 6vh;
+  float: left;
+  height: 7.5vh;
+  width: 7.5vh;
+}
+
+.colarriba {
+  padding-top: 2vh;
+  height: 3vh;
+}
+
+.colmedio {
+  padding-top: 2vh;
+  height: 12vh;
+}
+
+.colabajo {
+  padding-top: 2vh;
+  height: 6vh;
+}
+
+.colbotones {
+  margin-top: 6vh;
+  margin-left: 6vh;
+  float: left;
+  height: 16vh;
+  width: 26.5vh;
+}
+
+.pantalla {
+  border-radius: 3%;
+  border-style: none;
+  background-color: #AAD98B;
+  width: 48vh;
+  height: 16.26vh;
+}
+
+.botonceleste {
+  border-radius: 100%;
+  float: left;
+  background-color: #9DC6D8;
+  border: none;
+  width: 9.75vh;
+  height: 9.75vh;
+}
+
+.botonazul {
+  border-radius: 100%;
+  border-style: none;
+  margin-left: 1vh;
+  background-color: #00B3CA;
+  width: 7.3vh;
+  height: 7.3vh;
+}
+
+.botonrojo {
+  border-radius: 100%;
+  float: left;
+  border-style: none;
+  background-color: #C8707E;
+  width: 3.25vh;
+  height: 3.25vh;
+}
+
+.botonamarillo {
+  border-radius: 100%;
+  float: left;
+  border-style: none;
+  background-color: #EED98B;
+  width: 3.25vh;
+  height: 3.25vh;
+}
+
+.botonverde {
+  border-radius: 100%;
+  float: left;
+  border-style: none;
+  background-color: #AAD98B;
+  width: 3.25vh;
+  height: 3.25vh;
+}
+
+.botonbordo {
+  border-radius: 100%;
+  border-style: none;
+  background-color: #C8707E;
+  float: left;
+  margin-left: 3vh;
+  margin-top: 1.2vh;
+  width: 4.8vh;
+  height: 4.8vh;
+}
+
+.botoncitorojo {
+  border-radius: 100%;
+  border-style: none;
+  background-color: #C8707E;
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+.botoncitoamarillo {
+  border-radius: 100%;
+  border-style: none;
+  float: left;
+  background-color: #EED98B;
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+.botoncitoverde {
+  border-radius: 100%;
+  border-style: none;
+  float: left;
+  background-color: #AAD98B;
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+.flechanegra {
+  border-radius: 15%;
+  border-style: none;
+  background-color: #C6CCCC;
+  width: 4.6vh;
+  height: 4.6vh;
+  margin: 0vh;
+  padding: 0vh;
+}
+
+.flecharoja {
+  border-radius: 20%;
+  border-style: none;
+  float: left;
+  background-color: #FBEFF8;
+  width: 5.7vh;
+  height: 4.8vh;
+}
+
+.flechaamarilla {
+  border-radius: 100%;
+  border-style: none;
+  float: right;
+  background-color: #EED98B;
+  width: 4.8vh;
+  height: 4.8vh;
+}
+
+.cositoazul {
+  border-radius: 10%;
+  border-style: none;
+  background-color: #00B3CA;
+  width: 6.5vh;
+  height: 4.8vh;
+}
+
+.cositoverde {
+  border-radius: 30%;
+  border-style: none;
+  background-color: #AAD98B;
+  width: 7vh;
+  height: 1vh;
+}
+
+.cositonaranja {
+  border-radius: 30%;
+  border-style: none;
+  background-color: #F69256;
+  width: 7vh;
+  height: 1vh;
+}
+
+.cositoverde2 {
+  float: right;
+  border-radius: 30%;
+  border-style: none;
+  background-color: #AAD98B;
+  width: 7vh;
+  height: 1vh;
+}
+
+.cositonaranja2 {
+  float: right;
+  border-radius: 30%;
+  border-style: none;
+  background-color: #F69256;
+  width: 7vh;
+  height: 1vh;
+}
+
+.botonazonaranja {
+  border-radius: 10%;
+  border-style: none;
+  background-color: #F69256;
+  width: 13vh;
+  height: 6.5vh;
+}
+
+.colfuncion {
+  border-radius: 25%;
+  margin-left: 4vh;
+  background-color: #AC99C1;
+  width: 90px;
+  height: 60px;
+}
+
+.funcion {
+  border-radius: 30%;
+  margin-top: 1vh;
+  width: 50px;
+  height: 40px;
+}}

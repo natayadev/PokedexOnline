@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script
+      src="http://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="pokedex.css">
+    <title>Pokedex online</title>
+    <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h3><img src="logo.png" width="150vh">ONLINE</h3>
+    </div>
+    <div class="pokedex2">
+      <br><img src="pika.png" width="150vh">
+      <p><sup>Pikachu dice: Disculpe las molestias, pika pika</sup>
+      <br><br>Aumenta el tamaño de tu ventana
+      <br>o consigue un dispositivo con la pantalla más grande
+      <br>para que tu pokédex funcione correctamente.</p>
+    </div>
+      <div class="pokedex">
+        <div class="izquierda">
+          <div class="arriba">
+            <br><input class="botonceleste" type="button"></input>
+            <input class="botonamarillo" type="button"></input>
+            <input class="botonverde" type="button"></input>
+            <input class="botonrojo" type="button"></input>
+          </div>
+          <div class="medio">
+            <div class="pokemonafuera">
+              <input class="botoncitorojo" type="button"></input>
+              <input class="botoncitorojo" type="button"></input>
+              <div class="pokemonadentro">
+                <img id="#image" src="">
+              </div>
+              <input class="botonbordo" type="button"></input>
+            </div>
+          </div>
+          <div class="abajo">
+            <div class="colazul">
+              <input id="buscarDatos" class="botonazul" type="button"></input>
+            </div>
+            <div class="colbotones">
+              <input class="cositoverde" type="button"></input>
+              <input class="cositonaranja" type="button"></input>
+                <div class="colfuncion">
+                  <input id="#id" class="funcion"></input>
+                </div>
+            </div>
+            <div class="flechas">
+              <input class="flechanegra" type="button"></input><br>
+              <input class="flechanegra" type="button"></input>
+              <input class="flechanegra" type="button"></input>
+              <input class="flechanegra" type="button"></input><br>
+              <input class="flechanegra" type="button"></input>
+            </div>
+          </div>
+        </div>
+        <div class="derecha">
+          <div class="arriba">
+          </div>
+          <div class="medio">
+            <input id="#name" class="pantalla" type="button"></input><br>
+            <br><input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input><br>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+            <input class="cositoazul" type="button"></input>
+          </div><br>
+          <div class="abajo">
+            <div class="colarriba">
+              <input class="botoncitoverde" type="button"></input>
+              <input class="botoncitoamarillo" type="button"></input>
+              <input class="cositoverde2" type="button"></input>
+              <input class="cositonaranja2" type="button"></input>
+            </div>
+            <div class="colmedio">
+              <input class="flecharoja" type="button"></input>
+              <input class="flecharoja" type="button"></input>
+              <input class="flechaamarilla" type="button"></input>
+            </div>
+            <div class="colabajo">
+              <input class="botonazonaranja" type="button"></input>
+              <input class="botonazonaranja" type="button"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+      $(function(){
+        $("#buscarDatos").click(function(){
+
+          var id=$("#id").val();
+
+       $.ajax({
+         method: "GET",
+         url: "https://pokeapi.co/api/v2/pokemon/",
+         data: {
+           name: name,
+           id: id,
+         },
+         beforeSend: function(){
+           console.log("bien :)");
+         },
+         success: function(respuesta) {
+           $("#id").text(respuesta.main.id);
+         },
+         error: function(){
+           console.log("error :(");
+         }
+           });
+         });
+       });
+    </script>
+  </body>
+</html>
