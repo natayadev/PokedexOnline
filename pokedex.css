@@ -17,6 +17,10 @@ body {
   display: none;
 }
 
+.instrucciones {
+  display: none;
+}
+
 .pokedex2 {
   background-color: #ef5350;
   border-radius: 5%;

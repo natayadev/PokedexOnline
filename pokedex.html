@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -10,15 +11,19 @@
       src="http://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="sweet-modal/dist/min/jquery.sweet-modal.min.css" />
+    <script src="sweet-modal/dist/min/jquery.sweet-modal.min.js"></script>
     <link rel="stylesheet" href="pokedex.css">
     <title>Pokedex online</title>
     <link rel="shortcut icon" href="favicon.ico">
-
   </head>
 
   <body>
     <div class="jumbotron">
       <h3><img src="logo.png" width="150vh">ONLINE</h3>
+    </div>
+
     </div>
     <div class="pokedex2">
       <br><img src="pika.png" width="150vh">
@@ -55,18 +60,18 @@
           </div>
           <div class="abajo">
             <div class="colazul">
-              <input class="botonazul" type="button"></input>
+              <button class="botonazul" type="button">😃</button>
             </div>
             <div class="colbotones">
               <input class="cositoverde" type="button"></input>
               <input class="cositonaranja" type="button"></input>
             </div>
             <div class="flechas">
-              <input onchange="subeId()" class="flechanegra" type="button"></input><br>
-              <input class="flechanegra" type="button"></input>
-              <input class="flechanegra" type="button"></input>
-              <input class="flechanegra" type="button"></input><br>
-              <input onchange="bajaId()" class="flechanegra" type="button"></input>
+              <button class="flechanegra" type="button">🔼</button><br>
+              <button class="flechanegra" type="button"></button>
+              <button class="flechanegra" type="button"></button>
+              <button class="flechanegra" type="button"></button><br>
+              <button class="flechanegra" type="button">🔽</button>
             </div>
           </div>
         </div>
@@ -97,7 +102,7 @@
             <div class="colmedio">
               <input class="flecharoja" type="button"></input>
               <input class="flecharoja" type="button"></input>
-              <input class="flechaamarilla" type="button"></input>
+              <button class="flechaamarilla boton" type="button">💬</button>
             </div>
             <div class="colabajo">
               <input class="botonazonaranja" type="button"></input>
@@ -109,7 +114,6 @@
 
 
     <script>
-
     let lista = document.getElementById("listaPokemon")
 
       function consultarPokemon(id, num){
@@ -142,16 +146,12 @@
 
       pokemonRandom()
 
-      function subeId(id) {
 
-        subeId()
-      }
-
-      function bajaId(id) {
-
-        bajaId()
-      }
+      $(".boton").click(function(){
+         alert("Utiliza las flechas 🔼🔽 para subir y bajar de pokemon");
+      });
 
     </script>
+
   </body>
 </html>
