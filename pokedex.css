@@ -7,6 +7,11 @@
   color: #FFF;
 }
 
+body {
+  color: #FFF;
+  background-color: #2f2f2f;
+}
+
 @media screen and (max-width: 800px) {
 .pokedex {
   display: none;
@@ -19,8 +24,8 @@
   width: 80vh;
   margin: auto;
   color: #FBEFF8;
-  border: solid #481557 1px;
-  border-bottom: 5px;
+  border: solid #481557 0.16vh;
+  border-bottom: 0.82vh;
 }}
 
 @media screen and (min-width: 800px) {
@@ -32,28 +37,60 @@
   background-color: #ef5350;
   border-radius: 5%;
   height: 82vh;
-  width: 128vh;
+  width: 123vh;
   margin: auto;
-  border: solid #481557 1px;
-  border-bottom: 5px;
+  border: solid #481557 0.16vh;
+  border-bottom: 0.82vh;
+}
 
+.info {
+  position: relative;
+  z-index: 1;
+}
+
+.info input {
+  background-color: #FFF;
+  position: absolute;
+  border: 1.64vh solid #AC99C1;
+  color: #2f2f2f;
+  font-size: 4.94vh;
+  border-radius: 10%;
+  margin-left: -38.3vh;
+  margin-top: 70vh;
+  width: 14vh;
+  height: 9.5vh;
+}
+
+.info img {
+  position: absolute;
+  margin-top: 22.2vh;
+  margin-left: 18vh;
+  background-color: #FFF;
+  left: 2.47vh;
+}
+
+.info p {
+  color: #2f2f2f;
+  margin-left: 80vh;
+  margin-top: 23.5vh;
+  position: absolute;
 }
 
 .pokemonadentro {
-  position: relative;
   background-color: #FFF;
-  border-radius: 20px;
-  left: 15px;
-  width: 270px;
-  height: 150px;
+  position: relative;
+  border-radius: 10%;
+  left: 2.47vh;
+  width: 44.48vh;
+  height: 24.7vh;
 }
 
 .pokemonafuera {
   background-color: #C6CCCC;
-  border-radius: 20px;
+  border-radius: 10%;
   margin-left: 4vh;
-  width: 300px;
-  height: 212px;
+  width: 49.42vh;
+  height: 34.92vh;
 }
 
 .izquierda {
@@ -74,12 +111,12 @@
 
 .arriba {
   height: 18vh;
-  width: 56.8vh;
+  width: 57vh;
 }
 
 .medio {
   height: 34vh;
-  width: 56.8vh;
+  width: 57vh;
 }
 
 .abajo {
@@ -88,9 +125,8 @@
 }
 
 .flechas {
-  margin-left: 20vh;
-  float: left;
-  margin-top: 6vh;
+  margin-left: auto;
+  margin-top: 8vh;
   height: 16vh;
   width: 16vh;
  }
@@ -129,6 +165,7 @@
   border-radius: 3%;
   border-style: none;
   background-color: #AAD98B;
+  color: #FFF;
   width: 48vh;
   height: 16.26vh;
 }
@@ -293,17 +330,9 @@
   height: 6.5vh;
 }
 
-.colfuncion {
-  border-radius: 25%;
-  margin-left: 4vh;
-  background-color: #AC99C1;
-  width: 90px;
-  height: 60px;
-}
-
 .funcion {
   border-radius: 30%;
   margin-top: 1vh;
-  width: 50px;
-  height: 40px;
+  width: 111.5vh;
+  height: 89.2vh;
 }}

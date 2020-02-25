@@ -12,7 +12,7 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="pokedex.css">
     <title>Pokedex online</title>
-    <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
   </head>
 
@@ -27,7 +27,16 @@
       <br>o consigue un dispositivo con la pantalla más grande
       <br>para que tu pokédex funcione correctamente.</p>
     </div>
+
       <div class="pokedex">
+        <div id="listaPokemon" class="info">
+          <div id="pokemon-1">
+            <img src="" width="145vh">
+            <p></p>
+            <input></input>
+          </div>
+        </div>
+
         <div class="izquierda">
           <div class="arriba">
             <br><input class="botonceleste" type="button"></input>
@@ -40,28 +49,24 @@
               <input class="botoncitorojo" type="button"></input>
               <input class="botoncitorojo" type="button"></input>
               <div class="pokemonadentro">
-                <img id="#image" src="">
               </div>
               <input class="botonbordo" type="button"></input>
             </div>
           </div>
           <div class="abajo">
             <div class="colazul">
-              <input id="buscarDatos" class="botonazul" type="button"></input>
+              <input class="botonazul" type="button"></input>
             </div>
             <div class="colbotones">
               <input class="cositoverde" type="button"></input>
               <input class="cositonaranja" type="button"></input>
-                <div class="colfuncion">
-                  <input id="#id" class="funcion"></input>
-                </div>
             </div>
             <div class="flechas">
-              <input class="flechanegra" type="button"></input><br>
+              <input onchange="subeId()" class="flechanegra" type="button"></input><br>
               <input class="flechanegra" type="button"></input>
               <input class="flechanegra" type="button"></input>
               <input class="flechanegra" type="button"></input><br>
-              <input class="flechanegra" type="button"></input>
+              <input onchange="bajaId()" class="flechanegra" type="button"></input>
             </div>
           </div>
         </div>
@@ -69,7 +74,8 @@
           <div class="arriba">
           </div>
           <div class="medio">
-            <input id="#name" class="pantalla" type="button"></input><br>
+            <div class="pantalla">
+            </div>
             <br><input class="cositoazul" type="button"></input>
             <input class="cositoazul" type="button"></input>
             <input class="cositoazul" type="button"></input>
@@ -100,31 +106,52 @@
           </div>
         </div>
       </div>
+
+
     <script>
-      $(function(){
-        $("#buscarDatos").click(function(){
 
-          var id=$("#id").val();
+    let lista = document.getElementById("listaPokemon")
 
-       $.ajax({
-         method: "GET",
-         url: "https://pokeapi.co/api/v2/pokemon/",
-         data: {
-           name: name,
-           id: id,
-         },
-         beforeSend: function(){
-           console.log("bien :)");
-         },
-         success: function(respuesta) {
-           $("#id").text(respuesta.main.id);
-         },
-         error: function(){
-           console.log("error :(");
-         }
-           });
-         });
-       });
+      function consultarPokemon(id, num){
+        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(function(response){
+          response.json()
+          .then(function(pokemon){
+            crearPokemon(pokemon, num)
+          })
+        })
+      }
+
+      function pokemonRandom() {
+        let numRandom = Math.round(Math.random()*20)
+        consultarPokemon(numRandom, 1)
+      }
+
+      function crearPokemon(pokemon, num) {
+        let item = lista.querySelector(`#pokemon-${num}`)
+
+        let imagen = item.getElementsByTagName("img")[0]
+        imagen.setAttribute("src", pokemon.sprites.front_default)
+
+        let nombre = item.getElementsByTagName("p")[0]
+        nombre.textContent = pokemon.name
+
+        let numero = item.getElementsByTagName("input")[0]
+        numero.setAttribute("placeholder", pokemon.id)
+      }
+
+      pokemonRandom()
+
+      function subeId(id) {
+
+        subeId()
+      }
+
+      function bajaId(id) {
+
+        bajaId()
+      }
+
     </script>
   </body>
 </html>
