@@ -1,1 +1,1 @@
-Pokedex Online: proyecto web utilizando API rest, AJAX y Jquery
+Pokedex Online: proyecto web utilizando una API rest, AJAX y Jquery
