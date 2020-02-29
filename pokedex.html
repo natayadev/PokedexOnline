@@ -12,21 +12,22 @@
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="sweet-modal/dist/min/jquery.sweet-modal.min.css" />
-    <script src="sweet-modal/dist/min/jquery.sweet-modal.min.js"></script>
-    <link rel="stylesheet" href="pokedex.css">
+    <link rel="stylesheet" href="plugins/sweet-modal-master/dist/min/jquery.sweet-modal.min.css"/>
+    <script src="plugins/sweet-modal-master/dist/min/jquery.sweet-modal.min.js"></script>
+
+    <link rel="stylesheet" href="css/pokedex.css">
     <title>Pokedex online</title>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
   </head>
 
   <body>
     <div class="jumbotron">
-      <h3><img src="logo.png" width="150vh">ONLINE</h3>
+      <h3><img src="images/logo.png" width="150vh">ONLINE</h3>
     </div>
 
     </div>
     <div class="pokedex2">
-      <br><img src="pika.png" width="150vh">
+      <br><img src="images/pika.png" width="150vh">
       <p><sup>Pikachu dice: Disculpe las molestias, pika pika</sup>
       <br><br>Aumenta el tamaño de tu ventana
       <br>o consigue un dispositivo con la pantalla más grande
@@ -60,7 +61,7 @@
           </div>
           <div class="abajo">
             <div class="colazul">
-              <button class="botonazul" type="button">😃</button>
+              <button class="botonazul" type="button"></button>
             </div>
             <div class="colbotones">
               <input class="cositoverde" type="button"></input>
@@ -81,7 +82,7 @@
           <div class="medio">
             <div class="pantalla">
             </div>
-            <br><input class="cositoazul" type="button"></input>
+            <div><br><input class="cositoazul" type="button"></input>
             <input class="cositoazul" type="button"></input>
             <input class="cositoazul" type="button"></input>
             <input class="cositoazul" type="button"></input>
@@ -112,46 +113,7 @@
         </div>
       </div>
 
-
-    <script>
-    let lista = document.getElementById("listaPokemon")
-
-      function consultarPokemon(id, num){
-        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        .then(function(response){
-          response.json()
-          .then(function(pokemon){
-            crearPokemon(pokemon, num)
-          })
-        })
-      }
-
-      function pokemonRandom() {
-        let numRandom = Math.round(Math.random()*20)
-        consultarPokemon(numRandom, 1)
-      }
-
-      function crearPokemon(pokemon, num) {
-        let item = lista.querySelector(`#pokemon-${num}`)
-
-        let imagen = item.getElementsByTagName("img")[0]
-        imagen.setAttribute("src", pokemon.sprites.front_default)
-
-        let nombre = item.getElementsByTagName("p")[0]
-        nombre.textContent = pokemon.name
-
-        let numero = item.getElementsByTagName("input")[0]
-        numero.setAttribute("placeholder", pokemon.id)
-      }
-
-      pokemonRandom()
-
-
-      $(".boton").click(function(){
-         alert("Utiliza las flechas 🔼🔽 para subir y bajar de pokemon");
-      });
-
-    </script>
+      <script src="js/scripts.js"></script>
 
   </body>
 </html>

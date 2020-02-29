@@ -75,7 +75,7 @@ body {
 
 .info p {
   color: #2f2f2f;
-  margin-left: 80vh;
+  margin-left: 83vh;
   margin-top: 23.5vh;
   position: absolute;
 }
@@ -172,6 +172,7 @@ body {
   color: #FFF;
   width: 48vh;
   height: 16.26vh;
+  margin-left: 5vh;
 }
 
 .botonceleste {
