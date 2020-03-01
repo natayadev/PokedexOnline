@@ -10,8 +10,9 @@ let lista = document.getElementById("listaPokemon")
     })
   }
 
+  var numRandom = Math.round(Math.random()*20)
+
   function pokemonRandom() {
-    let numRandom = Math.round(Math.random()*20)
     consultarPokemon(numRandom, 1)
   }
 
@@ -34,7 +35,23 @@ let lista = document.getElementById("listaPokemon")
   $(".boton").click(function(){
     $.sweetModal({
 	title: '💬 Instrucciones',
-	content: "Utiliza la flecha 🔼 para subir de pokemon<br>Utiliza la flecha 🔽 para bajar de pokemon",
+	content: "Sólo podras navegar por los pokemones de la primera edición (primeros 20)<br>Utiliza la flecha 🔼 para subir de pokemon<br>Utiliza la flecha 🔽 para bajar de pokemon",
 	theme: $.sweetModal.THEME_DARK
     });
   });
+
+  function incrementarPokemon() {
+    if (numRandom < 21) {
+      consultarPokemon(numRandom++, 1);
+    } else {
+      javascrip.void(0);
+    }
+  }
+
+  function decrementarPokemon() {
+    if (numRandom > 0) {
+      consultarPokemon(numRandom--, 1);
+    } else {
+      javascrip.void(0);
+    }
+  }
